@@ -1,62 +1,49 @@
 import { expect } from 'chai';
-import { sum, sub, mult, div } from '../src/main';
+import  { fizzBuzz } from '../src/main.js';
 
-describe('Calc', () => {
+/*
+Desafio FizzBuzz
+Escreva uma lib que receba um número e:
+Se o número for divisível por 3, no lugar do número escreva 'Fizz' - X
+Se o número for divisível por 5, no lugar do número escreva 'Buzz' - X
+Se o número for divisível por 3 e 5, no lugar do número escreva 'FizzBuzz' - X
+Se não for múltiplo de nada, retorna o número
+ */
 
-  // smoke tests
-  describe('Smoke tests', () => {
+describe('Smoke tests', function() {
+  it('\'fizzBuzz\' should exist:', function () {
+    expect(fizzBuzz).to.exist;
+    expect(fizzBuzz).to.be.a.function;
+  });
+});
 
-    it('should exist the method `sum`', () => {
-      expect(sum).to.exist;
-      expect(sum).to.be.a.function;
-    });
-
-    it('should exist the method `sub`', () => {
-      expect(sub).to.exist;
-      expect(sub).to.be.a.function;
-    });
-
-    it('should exist the method `mult`', () => {
-      expect(mult).to.exist;
-      expect(mult).to.be.a.function;
-    });
-
-    it('should exist the method `div`', () => {
-      expect(div).to.exist;
-      expect(div).to.be.a.function;
-    });
-
+describe('FizzBuzz', function() {
+  it('should return 0 when 0', function () {
+    expect(fizzBuzz(0)).to.be.equal(0);
   });
 
-  describe('Sum', () => {
-    it('should return 4 when `sum(2,2)`', () => {
-      expect(sum(2, 2)).to.be.equal(4);
-    });
+  it('should return \'Fizz\' when multiple of 3', function () {
+    expect(fizzBuzz(3)).to.be.equal('Fizz');
+    expect(fizzBuzz(6)).to.be.equal('Fizz');
+    expect(fizzBuzz(9)).to.be.equal('Fizz');
   });
 
-  describe('Sub', () => {
-    it('should return 4 when `sub(6,2)`', () => {
-      expect(sub(6, 2)).to.be.equal(4);
-    });
-
-    it('should return -4 when `sub(6,10)`', () => {
-      expect(sub(6, 10)).to.be.equal(-4);
-    });
+  it('should return \'Buzz\' when multiple of 5', function () {
+    expect(fizzBuzz(5)).to.be.equal('Buzz');
+    expect(fizzBuzz(10)).to.be.equal('Buzz');
+    expect(fizzBuzz(20)).to.be.equal('Buzz');
   });
 
-  describe('Mult', () => {
-    it('should return 4 when `mult(2,2)`', () => {
-      expect(mult(2, 2)).to.be.equal(4);
-    });
+  it('should return \'FizzBuzz\' when multiple of 3 and 5', function () {
+    expect(fizzBuzz(15)).to.be.equal('FizzBuzz');
+    expect(fizzBuzz(30)).to.be.equal('FizzBuzz');
+    expect(fizzBuzz(45)).to.be.equal('FizzBuzz');
   });
 
-  describe('Div', () => {
-    it('should return 2 when `div(4,2)`', () => {
-      expect(div(4, 2)).to.be.equal(2);
-    });
-
-    it('should return `Não é possível divisão por zero!` when divide by 0', () => {
-      expect(div(4, 0)).to.be.equal('Não é possível divisão por zero!');
-    });
+  it('should return own entry when not multiple of 3 and/or 5', function () {
+    expect(fizzBuzz(1)).to.be.equal(1);
+    expect(fizzBuzz(2)).to.be.equal(2);
+    expect(fizzBuzz(7)).to.be.equal(7);
+    expect(fizzBuzz(11)).to.be.equal(11);
   });
 });
