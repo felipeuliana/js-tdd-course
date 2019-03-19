@@ -1,5 +1,6 @@
+/* global describe, it */
+
 import chai, { expect } from 'chai';
-import sinon from 'sinon';
 import sinonChai from 'sinon-chai';
 import SpotifyWrapper from '../src/index';
 
@@ -16,7 +17,7 @@ describe('SpotifyWrapper', () => {
 
   it('should receive apiURL as an option', () => {
     const spotify = new SpotifyWrapper({
-      apiURL: 'blabla',
+      apiURL: 'blabla'
     });
 
     expect(spotify.apiURL).to.be.equal('blabla');
@@ -30,7 +31,7 @@ describe('SpotifyWrapper', () => {
 
   it('should receive token as an option', () => {
     const spotify = new SpotifyWrapper({
-      token: 'foo',
+      token: 'foo'
     });
 
     expect(spotify.token).to.be.equal('foo');

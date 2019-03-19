@@ -1,3 +1,5 @@
+/* global describe, afterEach, beforeEach, it */
+
 import chai, { expect } from 'chai';
 import sinon from 'sinon';
 import sinonChai from 'sinon-chai';
@@ -21,7 +23,7 @@ describe('Search', () => {
     names = ['Deftones', 'Queen'];
 
     spotify = new SpotifyWrapper({
-      token: 'foo',
+      token: 'foo'
     });
 
     fetchedStub = sinon.stub(global, 'fetch');
@@ -29,28 +31,32 @@ describe('Search', () => {
   });
 
   describe('smoke tests', () => {
-    it('should exist the spotify.search.albums method', () => {
-      expect(spotify.search.albums).to.exist;
-    });
+    it(
+      'should exist the spotify.search.albums method',
+      () => expect(spotify.search.albums).to.exist
+    );
 
-    it('should exist the spotify.search.artists method', () => {
-      expect(spotify.search.artists).to.exist;
-    });
+    it(
+      'should exist the spotify.search.artists method',
+      () => expect(spotify.search.artists).to.exist
+    );
 
-    it('should exist the spotify.search.playlists method', () => {
-      expect(spotify.search.playlists).to.exist;
-    });
+    it(
+      'should exist the spotify.search.playlists method',
+      () => expect(spotify.search.playlists).to.exist
+    );
 
-    it('should exist the spotify.search.tracks method', () => {
-      expect(spotify.search.tracks).to.exist;
-    });
+    it(
+      'should exist the spotify.search.tracks method',
+      () => expect(spotify.search.tracks).to.exist
+    );
   });
 
   describe('Testing spotify.search.albums', () => {
     it('should call fetch function', () => {
       spotify.search.albums();
 
-      expect(fetchedStub).to.have.been.calledOnce;
+      return expect(fetchedStub).to.have.been.calledOnce;
     });
 
     it('should call fetch with the correct URL', () => {
@@ -70,7 +76,7 @@ describe('Search', () => {
     it('should call fetch function', () => {
       spotify.search.artists();
 
-      expect(fetchedStub).to.have.been.calledOnce;
+      return expect(fetchedStub).to.have.been.calledOnce;
     });
 
     it('should call fetch with the correct URL', () => {
@@ -90,7 +96,7 @@ describe('Search', () => {
     it('should call fetch function', () => {
       spotify.search.playlists();
 
-      expect(fetchedStub).to.have.been.calledOnce;
+      return expect(fetchedStub).to.have.been.calledOnce;
     });
 
     it('should call fetch with the correct URL', () => {
@@ -110,7 +116,7 @@ describe('Search', () => {
     it('should call fetch function', () => {
       spotify.search.tracks();
 
-      expect(fetchedStub).to.have.been.calledOnce;
+      return expect(fetchedStub).to.have.been.calledOnce;
     });
 
     it('should call fetch with the correct URL', () => {

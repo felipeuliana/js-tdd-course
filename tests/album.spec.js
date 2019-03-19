@@ -1,3 +1,5 @@
+/* global describe, afterEach, beforeEach, it */
+
 import chai, { expect } from 'chai';
 import sinon from 'sinon';
 import sinonChai from 'sinon-chai';
@@ -10,7 +12,6 @@ global.fetch = require('node-fetch');
 
 describe('Album', () => {
   let ids;
-  let promise;
   let spotify;
   let stubedFetch;
 
@@ -22,32 +23,35 @@ describe('Album', () => {
     ids = ['28sCbClwbAhHN6ovutizQg', '42QVkdlfEk9uaG0NboeKpq'];
 
     spotify = new SpotifyWrapper({
-      token: 'foo',
+      token: 'foo'
     });
 
     stubedFetch = sinon.stub(global, 'fetch');
-    promise = stubedFetch.resolves({ json: () => ({ album: 'name' }) });
+    stubedFetch.resolves({ json: () => ({ album: 'name' }) });
   });
 
   describe('Smoke tests', () => {
-    it('should have getAlbum method', () => {
-      expect(spotify.album.getAlbum).to.exist;
-    });
+    it(
+      'should have getAlbum method',
+      () => expect(spotify.album.getAlbum).to.exist
+    );
 
-    it('should have getAlbums method', () => {
-      expect(spotify.album.getAlbums).to.exist;
-    });
+    it(
+      'should have getAlbums method',
+      () => expect(spotify.album.getAlbums).to.exist
+    );
 
-    it('should have getTracks method', () => {
-      expect(spotify.album.getTracks).to.exist;
-    });
+    it(
+      'should have getTracks method',
+      () => expect(spotify.album.getTracks).to.exist
+    );
   });
 
   describe('Testing getAlbum method', () => {
     it('should call fetch method', () => {
       spotify.album.getAlbum();
 
-      expect(stubedFetch).to.have.been.calledOnce;
+      return expect(stubedFetch).to.have.been.calledOnce;
     });
 
     it('should call fetch with the correct URL', () => {
@@ -73,15 +77,15 @@ describe('Album', () => {
 
   describe('Testing getAlbums method', () => {
     it('should call fetch method', () => {
-      const albums = spotify.album.getAlbums();
+      spotify.album.getAlbums();
 
-      expect(stubedFetch).to.have.been.calledOnce;
+      return expect(stubedFetch).to.have.been.calledOnce;
     });
 
     it('should call fetch with the correct URL\'s', () => {
       const albumsURL = `${API_URL}/albums/?ids=`;
 
-      const albums = spotify.album.getAlbums(ids);
+      spotify.album.getAlbums(ids);
 
       expect(stubedFetch).to.have.been.calledWith(`${albumsURL}${ids}`);
     });
@@ -97,16 +101,16 @@ describe('Album', () => {
 
   describe('Testing getTracks method', () => {
     it('should call fetch method', () => {
-      const tracks = spotify.album.getTracks();
+      spotify.album.getTracks();
 
-      expect(stubedFetch).to.have.been.calledOnce;
+      return expect(stubedFetch).to.have.been.calledOnce;
     });
 
     it('should call fetch with the correct URL', () => {
       const tracksURL = `${API_URL}/tracks/`;
 
       ids.forEach((id) => {
-        const tracks = spotify.album.getTracks(id);
+        spotify.album.getTracks(id);
 
         expect(stubedFetch).to.have.been.calledWith(`${tracksURL}${id}`);
       });

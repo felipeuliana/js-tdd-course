@@ -5,9 +5,9 @@
     "passes": 28,
     "pending": 0,
     "failures": 0,
-    "start": "2019-02-28T21:46:29.176Z",
-    "end": "2019-02-28T21:46:29.194Z",
-    "duration": 18,
+    "start": "2019-03-15T13:21:57.853Z",
+    "end": "2019-03-15T13:21:57.909Z",
+    "duration": 56,
     "testsRegistered": 28,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -19,7 +19,7 @@
     "pendingPercentClass": "danger"
   },
   "suites": {
-    "uuid": "c3963c06-0798-4cfa-bfc6-03f6fa5a4958",
+    "uuid": "28746625-ab66-410a-8742-2acd3c11a2b3",
     "title": "",
     "fullFile": "",
     "file": "",
@@ -28,7 +28,7 @@
     "tests": [],
     "suites": [
       {
-        "uuid": "7f23048e-3a79-45c4-b27a-e6c9f6e8ea60",
+        "uuid": "44011f22-7caa-461d-9a72-d471a2c2d4e2",
         "title": "Album",
         "fullFile": "/home/mtzcpd830/projetos/ext/js-tdd-course/tests/album.spec.js",
         "file": "/tests/album.spec.js",
@@ -37,14 +37,14 @@
             "title": "\"before each\" hook",
             "fullTitle": "Album \"before each\" hook",
             "timedOut": false,
-            "duration": 1,
+            "duration": 0,
             "pass": false,
             "fail": false,
             "pending": false,
-            "code": "ids = ['28sCbClwbAhHN6ovutizQg', '42QVkdlfEk9uaG0NboeKpq'];\nspotify = new _index2.default({\n  token: 'foo'\n});\nstubedFetch = _sinon2.default.stub(global, 'fetch');\npromise = stubedFetch.resolves({ json: function json() {\n    return { album: 'name' };\n  } });",
+            "code": "ids = ['28sCbClwbAhHN6ovutizQg', '42QVkdlfEk9uaG0NboeKpq'];\nspotify = new _index2.default({\n  token: 'foo'\n});\nstubedFetch = _sinon2.default.stub(global, 'fetch');\nstubedFetch.resolves({ json: function json() {\n    return { album: 'name' };\n  } });",
             "err": {},
             "isRoot": false,
-            "uuid": "dd6c70f9-176a-481e-bd20-e92e2e647642",
+            "uuid": "0608e94e-bc70-48a5-a7ef-7d8e5761e356",
             "isHook": true,
             "skipped": false
           }
@@ -61,7 +61,7 @@
             "code": "stubedFetch.restore();",
             "err": {},
             "isRoot": false,
-            "uuid": "02e0f9f0-0c02-4a85-b66f-ed015458c3be",
+            "uuid": "304792a9-eef3-43bb-9e69-bb998365e03f",
             "isHook": true,
             "skipped": false
           }
@@ -69,7 +69,7 @@
         "tests": [],
         "suites": [
           {
-            "uuid": "a7e98cf1-8f32-4211-af6c-b26a6ead425b",
+            "uuid": "3d36c4d4-5256-429d-b97b-df563e34265e",
             "title": "Smoke tests",
             "fullFile": "/home/mtzcpd830/projetos/ext/js-tdd-course/tests/album.spec.js",
             "file": "/tests/album.spec.js",
@@ -86,10 +86,10 @@
                 "pass": true,
                 "fail": false,
                 "pending": false,
-                "code": "(0, _chai.expect)(spotify.album.getAlbum).to.exist;",
+                "code": "return (0, _chai.expect)(spotify.album.getAlbum).to.exist;",
                 "err": {},
                 "isRoot": false,
-                "uuid": "812c436f-2c92-4948-bec6-034d614f31de",
+                "uuid": "2c02df42-bc1d-4bde-9439-804c0e3e21ba",
                 "isHook": false,
                 "skipped": false
               },
@@ -103,10 +103,10 @@
                 "pass": true,
                 "fail": false,
                 "pending": false,
-                "code": "(0, _chai.expect)(spotify.album.getAlbums).to.exist;",
+                "code": "return (0, _chai.expect)(spotify.album.getAlbums).to.exist;",
                 "err": {},
                 "isRoot": false,
-                "uuid": "d2914ffd-2c3a-429f-9865-148a0eca5a03",
+                "uuid": "0df3ec5d-e8c2-4aa8-969c-815687f9d30b",
                 "isHook": false,
                 "skipped": false
               },
@@ -120,19 +120,19 @@
                 "pass": true,
                 "fail": false,
                 "pending": false,
-                "code": "(0, _chai.expect)(spotify.album.getTracks).to.exist;",
+                "code": "return (0, _chai.expect)(spotify.album.getTracks).to.exist;",
                 "err": {},
                 "isRoot": false,
-                "uuid": "f6a04b9c-945e-4d95-a4c1-5e4e859b983d",
+                "uuid": "967fdee3-d874-4627-89d2-986a91a9f891",
                 "isHook": false,
                 "skipped": false
               }
             ],
             "suites": [],
             "passes": [
-              "812c436f-2c92-4948-bec6-034d614f31de",
-              "d2914ffd-2c3a-429f-9865-148a0eca5a03",
-              "f6a04b9c-945e-4d95-a4c1-5e4e859b983d"
+              "2c02df42-bc1d-4bde-9439-804c0e3e21ba",
+              "0df3ec5d-e8c2-4aa8-969c-815687f9d30b",
+              "967fdee3-d874-4627-89d2-986a91a9f891"
             ],
             "failures": [],
             "pending": [],
@@ -143,7 +143,7 @@
             "_timeout": 2000
           },
           {
-            "uuid": "3dd4ac86-aeab-4142-a6ee-9e7aecf68430",
+            "uuid": "98b1a34f-6d80-42d1-936a-296516a51a45",
             "title": "Testing getAlbum method",
             "fullFile": "/home/mtzcpd830/projetos/ext/js-tdd-course/tests/album.spec.js",
             "file": "/tests/album.spec.js",
@@ -154,16 +154,16 @@
                 "title": "should call fetch method",
                 "fullTitle": "Album Testing getAlbum method should call fetch method",
                 "timedOut": false,
-                "duration": 0,
+                "duration": 1,
                 "state": "passed",
                 "speed": "fast",
                 "pass": true,
                 "fail": false,
                 "pending": false,
-                "code": "spotify.album.getAlbum();\n(0, _chai.expect)(stubedFetch).to.have.been.calledOnce;",
+                "code": "spotify.album.getAlbum();\nreturn (0, _chai.expect)(stubedFetch).to.have.been.calledOnce;",
                 "err": {},
                 "isRoot": false,
-                "uuid": "6adf2787-767e-42c7-a2a6-607a08961437",
+                "uuid": "c8699516-528b-4f75-87d6-46d82affa431",
                 "isHook": false,
                 "skipped": false
               },
@@ -171,7 +171,7 @@
                 "title": "should call fetch with the correct URL",
                 "fullTitle": "Album Testing getAlbum method should call fetch with the correct URL",
                 "timedOut": false,
-                "duration": 1,
+                "duration": 0,
                 "state": "passed",
                 "speed": "fast",
                 "pass": true,
@@ -180,7 +180,7 @@
                 "code": "var albumURL = _config2.default + '/album/';\nids.forEach(function (id) {\n  spotify.album.getAlbum(id);\n  (0, _chai.expect)(stubedFetch).to.have.been.calledWith('' + albumURL + id);\n});",
                 "err": {},
                 "isRoot": false,
-                "uuid": "37712bdc-03b4-412b-a11d-345d22cb60f0",
+                "uuid": "693b139f-cd2e-46e8-8055-c6c24ea80e75",
                 "isHook": false,
                 "skipped": false
               },
@@ -197,16 +197,16 @@
                 "code": "ids.forEach(function (id) {\n  var album = spotify.album.getAlbum(id);\n  album.then(function (data) {\n    (0, _chai.expect)(data).to.be.eql({ album: 'name' });\n  });\n});",
                 "err": {},
                 "isRoot": false,
-                "uuid": "e2ffdf50-392a-4041-9997-e072637ac600",
+                "uuid": "e88393c9-baa9-4a81-8f2a-2815dc4bbfe2",
                 "isHook": false,
                 "skipped": false
               }
             ],
             "suites": [],
             "passes": [
-              "6adf2787-767e-42c7-a2a6-607a08961437",
-              "37712bdc-03b4-412b-a11d-345d22cb60f0",
-              "e2ffdf50-392a-4041-9997-e072637ac600"
+              "c8699516-528b-4f75-87d6-46d82affa431",
+              "693b139f-cd2e-46e8-8055-c6c24ea80e75",
+              "e88393c9-baa9-4a81-8f2a-2815dc4bbfe2"
             ],
             "failures": [],
             "pending": [],
@@ -217,7 +217,7 @@
             "_timeout": 2000
           },
           {
-            "uuid": "37b9a11a-c467-4dec-be2f-82444f70dcda",
+            "uuid": "6423916a-c0ae-4d6b-8d47-d8b02893b2d6",
             "title": "Testing getAlbums method",
             "fullFile": "/home/mtzcpd830/projetos/ext/js-tdd-course/tests/album.spec.js",
             "file": "/tests/album.spec.js",
@@ -234,10 +234,10 @@
                 "pass": true,
                 "fail": false,
                 "pending": false,
-                "code": "var albums = spotify.album.getAlbums();\n(0, _chai.expect)(stubedFetch).to.have.been.calledOnce;",
+                "code": "spotify.album.getAlbums();\nreturn (0, _chai.expect)(stubedFetch).to.have.been.calledOnce;",
                 "err": {},
                 "isRoot": false,
-                "uuid": "73b5d245-db15-4f95-82d2-4d8a6862255a",
+                "uuid": "c5ab4b9a-1a8e-4658-9bcd-a4a170ff9af9",
                 "isHook": false,
                 "skipped": false
               },
@@ -251,10 +251,10 @@
                 "pass": true,
                 "fail": false,
                 "pending": false,
-                "code": "var albumsURL = _config2.default + '/albums/?ids=';\nvar albums = spotify.album.getAlbums(ids);\n(0, _chai.expect)(stubedFetch).to.have.been.calledWith('' + albumsURL + ids);",
+                "code": "var albumsURL = _config2.default + '/albums/?ids=';\nspotify.album.getAlbums(ids);\n(0, _chai.expect)(stubedFetch).to.have.been.calledWith('' + albumsURL + ids);",
                 "err": {},
                 "isRoot": false,
-                "uuid": "c982f81a-3f15-4225-9d44-0355367004b0",
+                "uuid": "c06d3e15-6755-46f0-b282-fc2650b31b9a",
                 "isHook": false,
                 "skipped": false
               },
@@ -271,16 +271,16 @@
                 "code": "var albums = spotify.album.getAlbums(ids);\nalbums.then(function (data) {\n  (0, _chai.expect)(data).to.be.eql({ album: 'name' });\n});",
                 "err": {},
                 "isRoot": false,
-                "uuid": "9134048b-5bc1-4eab-8b65-eb6ce472043d",
+                "uuid": "f31554b4-5cb1-4962-851d-294a5f750032",
                 "isHook": false,
                 "skipped": false
               }
             ],
             "suites": [],
             "passes": [
-              "73b5d245-db15-4f95-82d2-4d8a6862255a",
-              "c982f81a-3f15-4225-9d44-0355367004b0",
-              "9134048b-5bc1-4eab-8b65-eb6ce472043d"
+              "c5ab4b9a-1a8e-4658-9bcd-a4a170ff9af9",
+              "c06d3e15-6755-46f0-b282-fc2650b31b9a",
+              "f31554b4-5cb1-4962-851d-294a5f750032"
             ],
             "failures": [],
             "pending": [],
@@ -291,7 +291,7 @@
             "_timeout": 2000
           },
           {
-            "uuid": "dc3ba6bb-d877-473e-b26c-7bf82da4f301",
+            "uuid": "9e20daa0-ddad-4f5e-85ae-958cf52a9011",
             "title": "Testing getTracks method",
             "fullFile": "/home/mtzcpd830/projetos/ext/js-tdd-course/tests/album.spec.js",
             "file": "/tests/album.spec.js",
@@ -308,10 +308,10 @@
                 "pass": true,
                 "fail": false,
                 "pending": false,
-                "code": "var tracks = spotify.album.getTracks();\n(0, _chai.expect)(stubedFetch).to.have.been.calledOnce;",
+                "code": "spotify.album.getTracks();\nreturn (0, _chai.expect)(stubedFetch).to.have.been.calledOnce;",
                 "err": {},
                 "isRoot": false,
-                "uuid": "05db9ed4-da8a-4502-9f40-67cf90af42be",
+                "uuid": "6e2e66dc-a1c6-4d62-98ab-b29961296b2e",
                 "isHook": false,
                 "skipped": false
               },
@@ -319,16 +319,16 @@
                 "title": "should call fetch with the correct URL",
                 "fullTitle": "Album Testing getTracks method should call fetch with the correct URL",
                 "timedOut": false,
-                "duration": 0,
+                "duration": 1,
                 "state": "passed",
                 "speed": "fast",
                 "pass": true,
                 "fail": false,
                 "pending": false,
-                "code": "var tracksURL = _config2.default + '/tracks/';\nids.forEach(function (id) {\n  var tracks = spotify.album.getTracks(id);\n  (0, _chai.expect)(stubedFetch).to.have.been.calledWith('' + tracksURL + id);\n});",
+                "code": "var tracksURL = _config2.default + '/tracks/';\nids.forEach(function (id) {\n  spotify.album.getTracks(id);\n  (0, _chai.expect)(stubedFetch).to.have.been.calledWith('' + tracksURL + id);\n});",
                 "err": {},
                 "isRoot": false,
-                "uuid": "b0544721-39cf-4504-9fef-b6421a3bd94d",
+                "uuid": "8dc10504-a7e5-42a7-84f1-d85170971165",
                 "isHook": false,
                 "skipped": false
               },
@@ -345,21 +345,21 @@
                 "code": "ids.forEach(function (id) {\n  var tracks = spotify.album.getTracks(id);\n  tracks.then(function (data) {\n    (0, _chai.expect)(data).to.be.eql({ album: 'name' });\n  });\n});",
                 "err": {},
                 "isRoot": false,
-                "uuid": "1a5935b3-93ea-4461-8d3e-1f53c26b3cc2",
+                "uuid": "dcf8f10b-c79e-424a-a2c8-da5feb8524b9",
                 "isHook": false,
                 "skipped": false
               }
             ],
             "suites": [],
             "passes": [
-              "05db9ed4-da8a-4502-9f40-67cf90af42be",
-              "b0544721-39cf-4504-9fef-b6421a3bd94d",
-              "1a5935b3-93ea-4461-8d3e-1f53c26b3cc2"
+              "6e2e66dc-a1c6-4d62-98ab-b29961296b2e",
+              "8dc10504-a7e5-42a7-84f1-d85170971165",
+              "dcf8f10b-c79e-424a-a2c8-da5feb8524b9"
             ],
             "failures": [],
             "pending": [],
             "skipped": [],
-            "duration": 0,
+            "duration": 1,
             "root": false,
             "rootEmpty": false,
             "_timeout": 2000
@@ -375,7 +375,7 @@
         "_timeout": 2000
       },
       {
-        "uuid": "c3ee174c-3bd1-42ee-a7aa-7c25f62bf89b",
+        "uuid": "8c12da49-ebd3-4352-9758-26e3c3529999",
         "title": "SpotifyWrapper",
         "fullFile": "/home/mtzcpd830/projetos/ext/js-tdd-course/tests/index.spec.js",
         "file": "/tests/index.spec.js",
@@ -395,7 +395,7 @@
             "code": "var spotify = new _index2.default({});\n(0, _chai.expect)(spotify).to.be.an.instanceof(_index2.default);",
             "err": {},
             "isRoot": false,
-            "uuid": "68db35a4-5ece-428c-9d4a-183463d68f1a",
+            "uuid": "93eeae21-fe60-41d2-9f91-1cc6eb7211cb",
             "isHook": false,
             "skipped": false
           },
@@ -412,7 +412,7 @@
             "code": "var spotify = new _index2.default({\n  apiURL: 'blabla'\n});\n(0, _chai.expect)(spotify.apiURL).to.be.equal('blabla');",
             "err": {},
             "isRoot": false,
-            "uuid": "09912406-2e24-46d7-8775-80a1a7244791",
+            "uuid": "8b439641-1f9b-450e-a436-731d7b8d7187",
             "isHook": false,
             "skipped": false
           },
@@ -429,7 +429,7 @@
             "code": "var spotify = new _index2.default({});\n(0, _chai.expect)(spotify.apiURL).to.be.equal('https://api.spotify.com/v1');",
             "err": {},
             "isRoot": false,
-            "uuid": "4a4f87fa-406d-49f3-bc11-74ccb71aec7e",
+            "uuid": "30270cbd-b485-4e02-840a-e34cb7d7a253",
             "isHook": false,
             "skipped": false
           },
@@ -446,17 +446,17 @@
             "code": "var spotify = new _index2.default({\n  token: 'foo'\n});\n(0, _chai.expect)(spotify.token).to.be.equal('foo');",
             "err": {},
             "isRoot": false,
-            "uuid": "040cd085-6be9-4d14-974c-ab3e18fee2e3",
+            "uuid": "386800a4-5a41-41ca-8a81-9724f2f3a7e5",
             "isHook": false,
             "skipped": false
           }
         ],
         "suites": [],
         "passes": [
-          "68db35a4-5ece-428c-9d4a-183463d68f1a",
-          "09912406-2e24-46d7-8775-80a1a7244791",
-          "4a4f87fa-406d-49f3-bc11-74ccb71aec7e",
-          "040cd085-6be9-4d14-974c-ab3e18fee2e3"
+          "93eeae21-fe60-41d2-9f91-1cc6eb7211cb",
+          "8b439641-1f9b-450e-a436-731d7b8d7187",
+          "30270cbd-b485-4e02-840a-e34cb7d7a253",
+          "386800a4-5a41-41ca-8a81-9724f2f3a7e5"
         ],
         "failures": [],
         "pending": [],
@@ -467,7 +467,7 @@
         "_timeout": 2000
       },
       {
-        "uuid": "80215f65-ffc9-4c80-8d6c-68db82045649",
+        "uuid": "db20cb64-68d6-49de-8e8b-f28e58500c56",
         "title": "Search",
         "fullFile": "/home/mtzcpd830/projetos/ext/js-tdd-course/tests/search.spec.js",
         "file": "/tests/search.spec.js",
@@ -483,7 +483,7 @@
             "code": "names = ['Deftones', 'Queen'];\nspotify = new _index2.default({\n  token: 'foo'\n});\nfetchedStub = _sinon2.default.stub(global, 'fetch');\nfetchedStub.resolves({ json: function json() {} });",
             "err": {},
             "isRoot": false,
-            "uuid": "d3059cae-876b-43fd-832b-dc8bfd261e2e",
+            "uuid": "9b61ea18-483b-46ba-8943-a132f53eefd9",
             "isHook": true,
             "skipped": false
           }
@@ -500,7 +500,7 @@
             "code": "fetchedStub.restore();",
             "err": {},
             "isRoot": false,
-            "uuid": "6b3eeed6-3437-47b8-8c26-d2cadc24c04f",
+            "uuid": "42e51e46-fe9b-4597-80d4-bb69d9262160",
             "isHook": true,
             "skipped": false
           }
@@ -508,7 +508,7 @@
         "tests": [],
         "suites": [
           {
-            "uuid": "d4a68ed4-b2e2-42d5-a0bc-0048efaeb769",
+            "uuid": "b17d0282-931a-4205-babd-7c5b5e0edc78",
             "title": "smoke tests",
             "fullFile": "/home/mtzcpd830/projetos/ext/js-tdd-course/tests/search.spec.js",
             "file": "/tests/search.spec.js",
@@ -525,10 +525,10 @@
                 "pass": true,
                 "fail": false,
                 "pending": false,
-                "code": "(0, _chai.expect)(spotify.search.albums).to.exist;",
+                "code": "return (0, _chai.expect)(spotify.search.albums).to.exist;",
                 "err": {},
                 "isRoot": false,
-                "uuid": "b3284908-c810-4c60-a455-74d427a35de1",
+                "uuid": "cf04b9ae-5a40-4b98-842b-1b69e6cb538f",
                 "isHook": false,
                 "skipped": false
               },
@@ -542,10 +542,10 @@
                 "pass": true,
                 "fail": false,
                 "pending": false,
-                "code": "(0, _chai.expect)(spotify.search.artists).to.exist;",
+                "code": "return (0, _chai.expect)(spotify.search.artists).to.exist;",
                 "err": {},
                 "isRoot": false,
-                "uuid": "c95d8c81-e651-40dc-bd33-ba037c8649ba",
+                "uuid": "8e81eb69-2120-4d61-9673-1352cbc8dd6e",
                 "isHook": false,
                 "skipped": false
               },
@@ -559,10 +559,10 @@
                 "pass": true,
                 "fail": false,
                 "pending": false,
-                "code": "(0, _chai.expect)(spotify.search.playlists).to.exist;",
+                "code": "return (0, _chai.expect)(spotify.search.playlists).to.exist;",
                 "err": {},
                 "isRoot": false,
-                "uuid": "59df6378-c71d-4560-b404-92b10ed511c1",
+                "uuid": "b2701e02-45c9-4bee-a9ea-8386b3bef056",
                 "isHook": false,
                 "skipped": false
               },
@@ -576,20 +576,20 @@
                 "pass": true,
                 "fail": false,
                 "pending": false,
-                "code": "(0, _chai.expect)(spotify.search.tracks).to.exist;",
+                "code": "return (0, _chai.expect)(spotify.search.tracks).to.exist;",
                 "err": {},
                 "isRoot": false,
-                "uuid": "17b62344-a25d-4631-9824-5b15e3c54af6",
+                "uuid": "08700093-06a7-4e44-ae4b-85936f2603d5",
                 "isHook": false,
                 "skipped": false
               }
             ],
             "suites": [],
             "passes": [
-              "b3284908-c810-4c60-a455-74d427a35de1",
-              "c95d8c81-e651-40dc-bd33-ba037c8649ba",
-              "59df6378-c71d-4560-b404-92b10ed511c1",
-              "17b62344-a25d-4631-9824-5b15e3c54af6"
+              "cf04b9ae-5a40-4b98-842b-1b69e6cb538f",
+              "8e81eb69-2120-4d61-9673-1352cbc8dd6e",
+              "b2701e02-45c9-4bee-a9ea-8386b3bef056",
+              "08700093-06a7-4e44-ae4b-85936f2603d5"
             ],
             "failures": [],
             "pending": [],
@@ -600,7 +600,7 @@
             "_timeout": 2000
           },
           {
-            "uuid": "731b9b47-f4e5-4142-97e8-f9466a795915",
+            "uuid": "54f4a446-7bb9-47d8-8acc-cada6cae0da1",
             "title": "Testing spotify.search.albums",
             "fullFile": "/home/mtzcpd830/projetos/ext/js-tdd-course/tests/search.spec.js",
             "file": "/tests/search.spec.js",
@@ -617,10 +617,10 @@
                 "pass": true,
                 "fail": false,
                 "pending": false,
-                "code": "spotify.search.albums();\n(0, _chai.expect)(fetchedStub).to.have.been.calledOnce;",
+                "code": "spotify.search.albums();\nreturn (0, _chai.expect)(fetchedStub).to.have.been.calledOnce;",
                 "err": {},
                 "isRoot": false,
-                "uuid": "0fd0b475-b270-498c-b763-3a4518dd7b8f",
+                "uuid": "54b372bc-4dca-483d-a357-d820754d1905",
                 "isHook": false,
                 "skipped": false
               },
@@ -628,7 +628,7 @@
                 "title": "should call fetch with the correct URL",
                 "fullTitle": "Search Testing spotify.search.albums should call fetch with the correct URL",
                 "timedOut": false,
-                "duration": 1,
+                "duration": 0,
                 "state": "passed",
                 "speed": "fast",
                 "pass": true,
@@ -637,26 +637,26 @@
                 "code": "var albumURL = void 0;\nnames.forEach(function (name) {\n  albumURL = _config2.default + '/search?q=' + name + '&type=album';\n  spotify.search.albums(name);\n  (0, _chai.expect)(fetchedStub).to.have.been.calledWith(albumURL);\n});",
                 "err": {},
                 "isRoot": false,
-                "uuid": "d77c1461-50e0-497c-bfd0-13cfd619ee53",
+                "uuid": "979eb2de-b259-4f36-ad39-9efdedbfc429",
                 "isHook": false,
                 "skipped": false
               }
             ],
             "suites": [],
             "passes": [
-              "0fd0b475-b270-498c-b763-3a4518dd7b8f",
-              "d77c1461-50e0-497c-bfd0-13cfd619ee53"
+              "54b372bc-4dca-483d-a357-d820754d1905",
+              "979eb2de-b259-4f36-ad39-9efdedbfc429"
             ],
             "failures": [],
             "pending": [],
             "skipped": [],
-            "duration": 1,
+            "duration": 0,
             "root": false,
             "rootEmpty": false,
             "_timeout": 2000
           },
           {
-            "uuid": "939e2423-ffc4-425e-a8b2-820454937833",
+            "uuid": "733c768e-1ff5-4da0-8ca8-91f1d8a0c11d",
             "title": "Testing spotify.search.artists",
             "fullFile": "/home/mtzcpd830/projetos/ext/js-tdd-course/tests/search.spec.js",
             "file": "/tests/search.spec.js",
@@ -673,10 +673,10 @@
                 "pass": true,
                 "fail": false,
                 "pending": false,
-                "code": "spotify.search.artists();\n(0, _chai.expect)(fetchedStub).to.have.been.calledOnce;",
+                "code": "spotify.search.artists();\nreturn (0, _chai.expect)(fetchedStub).to.have.been.calledOnce;",
                 "err": {},
                 "isRoot": false,
-                "uuid": "03be2508-f1e8-4c16-84e0-b03abe487540",
+                "uuid": "8bbe35bd-3f52-4fd8-8e2b-6d788f483aa9",
                 "isHook": false,
                 "skipped": false
               },
@@ -693,15 +693,15 @@
                 "code": "var artistURL = void 0;\nnames.forEach(function (name) {\n  artistURL = _config2.default + '/search?q=' + name + '&type=artist';\n  spotify.search.artists(name);\n  (0, _chai.expect)(fetchedStub).to.have.been.calledWith(artistURL);\n});",
                 "err": {},
                 "isRoot": false,
-                "uuid": "288526be-f90f-464e-88dc-f8687d6fe391",
+                "uuid": "1ac48ca9-4570-4f5b-928a-95ced1d56799",
                 "isHook": false,
                 "skipped": false
               }
             ],
             "suites": [],
             "passes": [
-              "03be2508-f1e8-4c16-84e0-b03abe487540",
-              "288526be-f90f-464e-88dc-f8687d6fe391"
+              "8bbe35bd-3f52-4fd8-8e2b-6d788f483aa9",
+              "1ac48ca9-4570-4f5b-928a-95ced1d56799"
             ],
             "failures": [],
             "pending": [],
@@ -712,7 +712,7 @@
             "_timeout": 2000
           },
           {
-            "uuid": "1274f75e-6fe8-41be-b4c0-0da205cdba58",
+            "uuid": "42e6258c-f0fe-4609-8957-0f570bb64c53",
             "title": "Testing spotify.search.playlists",
             "fullFile": "/home/mtzcpd830/projetos/ext/js-tdd-course/tests/search.spec.js",
             "file": "/tests/search.spec.js",
@@ -729,10 +729,10 @@
                 "pass": true,
                 "fail": false,
                 "pending": false,
-                "code": "spotify.search.playlists();\n(0, _chai.expect)(fetchedStub).to.have.been.calledOnce;",
+                "code": "spotify.search.playlists();\nreturn (0, _chai.expect)(fetchedStub).to.have.been.calledOnce;",
                 "err": {},
                 "isRoot": false,
-                "uuid": "dcfb00b4-e369-4164-968b-548234f2b5c3",
+                "uuid": "cd13a16e-c57e-4d57-84dc-771ef3882560",
                 "isHook": false,
                 "skipped": false
               },
@@ -749,15 +749,15 @@
                 "code": "var playlistURL = void 0;\nnames.forEach(function (name) {\n  playlistURL = _config2.default + '/search?q=' + name + '&type=playlist';\n  spotify.search.playlists(name);\n  (0, _chai.expect)(fetchedStub).to.have.been.calledWith(playlistURL);\n});",
                 "err": {},
                 "isRoot": false,
-                "uuid": "41d7ca8a-6ed9-478d-b32d-bc7c12487948",
+                "uuid": "9c2817ef-5b9c-45a8-b2c4-1f6efe8b936e",
                 "isHook": false,
                 "skipped": false
               }
             ],
             "suites": [],
             "passes": [
-              "dcfb00b4-e369-4164-968b-548234f2b5c3",
-              "41d7ca8a-6ed9-478d-b32d-bc7c12487948"
+              "cd13a16e-c57e-4d57-84dc-771ef3882560",
+              "9c2817ef-5b9c-45a8-b2c4-1f6efe8b936e"
             ],
             "failures": [],
             "pending": [],
@@ -768,7 +768,7 @@
             "_timeout": 2000
           },
           {
-            "uuid": "2caa4c2b-12d2-41da-bad6-940faddc2c64",
+            "uuid": "69c46014-efaa-4b35-a24a-be03977ad043",
             "title": "Testing spotify.search.tracks",
             "fullFile": "/home/mtzcpd830/projetos/ext/js-tdd-course/tests/search.spec.js",
             "file": "/tests/search.spec.js",
@@ -785,10 +785,10 @@
                 "pass": true,
                 "fail": false,
                 "pending": false,
-                "code": "spotify.search.tracks();\n(0, _chai.expect)(fetchedStub).to.have.been.calledOnce;",
+                "code": "spotify.search.tracks();\nreturn (0, _chai.expect)(fetchedStub).to.have.been.calledOnce;",
                 "err": {},
                 "isRoot": false,
-                "uuid": "1b66f668-dfac-4d50-b271-bcb25c233569",
+                "uuid": "67e748dd-1286-48ff-ac5a-aab871204067",
                 "isHook": false,
                 "skipped": false
               },
@@ -796,7 +796,7 @@
                 "title": "should call fetch with the correct URL",
                 "fullTitle": "Search Testing spotify.search.tracks should call fetch with the correct URL",
                 "timedOut": false,
-                "duration": 1,
+                "duration": 0,
                 "state": "passed",
                 "speed": "fast",
                 "pass": true,
@@ -805,20 +805,20 @@
                 "code": "var trackURL = void 0;\nnames.forEach(function (name) {\n  trackURL = _config2.default + '/search?q=' + name + '&type=track';\n  spotify.search.tracks(name);\n  (0, _chai.expect)(fetchedStub).to.have.been.calledWith(trackURL);\n});",
                 "err": {},
                 "isRoot": false,
-                "uuid": "cdfe698f-5780-413c-bcb9-aa4e791d6041",
+                "uuid": "e8552235-314e-4688-bfcb-9ba10ca083f7",
                 "isHook": false,
                 "skipped": false
               }
             ],
             "suites": [],
             "passes": [
-              "1b66f668-dfac-4d50-b271-bcb25c233569",
-              "cdfe698f-5780-413c-bcb9-aa4e791d6041"
+              "67e748dd-1286-48ff-ac5a-aab871204067",
+              "e8552235-314e-4688-bfcb-9ba10ca083f7"
             ],
             "failures": [],
             "pending": [],
             "skipped": [],
-            "duration": 1,
+            "duration": 0,
             "root": false,
             "rootEmpty": false,
             "_timeout": 2000

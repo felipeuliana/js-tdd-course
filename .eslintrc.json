@@ -1,6 +1,7 @@
 {
-    "extends": "airbnb-base",
+    "extends": "semistandard",
     "plugins": [
-        "import"
+        "standard",
+        "promise"
     ]
 }
