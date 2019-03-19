@@ -15,6 +15,6 @@ module.exports = {
   output: {
     library: 'spotifyWrapper',
     libraryTarget: 'umd',
-    path: include
+    path: path.join(__dirname, 'dist')
   }
 };

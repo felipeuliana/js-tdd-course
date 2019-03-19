@@ -10,7 +10,7 @@
     "build:umd": "./node_modules/.bin/webpack --output-filename spotify-wrapper.umd.js --mode=development",
     "build:umd:min": "./node_modules/.bin/webpack --output-filename spotify-wrapper.umd.min.js --mode=production",
     "build:all": "npm run build && npm run build:umd && npm run build:umd:min",
-    "lint": "./node_modules/.bin/eslint ./src/**/*.js ./tests/**",
+    "lint": "./node_modules/.bin/eslint ./src/*.js ./tests/*.js",
     "prepush": "npm run lint",
     "test": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register --reporter mochawesome",
     "test:tdd": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register --watch --reporter mochawesome",
