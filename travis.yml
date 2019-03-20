@@ -1,6 +1,10 @@
 language: node_js
 node_js:
   - "7"
+branches:
+  only:
+    - "master"
+    - "spotify-wrapper"
 cache:
   directories:
     - "node_modules"
