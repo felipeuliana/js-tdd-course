@@ -1,6 +1,7 @@
-/* global describe, it */
+/* global afterEach, beforeEach, describe, expect, it */
 
 import chai, { expect } from 'chai';
+import sinon from 'sinon';
 import sinonChai from 'sinon-chai';
 import SpotifyWrapper from '../src/index';
 
@@ -35,5 +36,59 @@ describe('SpotifyWrapper', () => {
     });
 
     expect(spotify.token).to.be.equal('foo');
+  });
+
+  describe('Verify request method', () => {
+    let stubedFetch;
+
+    afterEach(() => {
+      stubedFetch.restore();
+    });
+
+    beforeEach(() => {
+      stubedFetch = sinon.stub(global, 'fetch');
+      stubedFetch.resolves({ json: () => ({ album: 'name' }) });
+    });
+
+    it('should have request method', () => {
+      let spotify = new SpotifyWrapper({});
+
+      return expect(spotify.request).to.exist;
+    });
+
+    it('should call fetch when request', () => {
+      let spotify = new SpotifyWrapper({
+        token: 'foo'
+      });
+
+      spotify.request('url');
+
+      return expect(stubedFetch).to.be.calledOnce;
+    });
+
+    it('should call fetch with right url passed', () => {
+      let spotify = new SpotifyWrapper({
+        token: 'foo'
+      });
+
+      spotify.request('url');
+
+      return expect(stubedFetch).to.be.calledWith('url');
+    });
+
+    it('should call fetch with right headers passed', () => {
+      let spotify = new SpotifyWrapper({
+        token: 'foo'
+      });
+      const headers = {
+        headers: {
+          Authorization: `Bearer ${spotify.token}`
+        }
+      };
+
+      spotify.request('url', headers);
+
+      return expect(stubedFetch).to.be.calledWith('url', headers);
+    });
   });
 });
