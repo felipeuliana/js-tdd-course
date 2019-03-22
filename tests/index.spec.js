@@ -1,4 +1,4 @@
-/* global afterEach, beforeEach, describe, expect, it */
+/* global afterEach, beforeEach, describe, it */
 
 import chai, { expect } from 'chai';
 import sinon from 'sinon';

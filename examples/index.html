@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Spotify Wrapper Test</title>
+</head>
+<body>
+
+<div id="albums"></div>
+
+<script src="../dist/spotify-wrapper.umd.js"></script>
+
+<script>
+  const spotify = new SpotifyWrapper({
+    token: 'BQA61cgl8-pzPNxcL1fLzSr401HiYlPMd6g_wImVL1i19auLZmtQh13VU5tJl8sSO9GzRiWMk9RAu6z1z6wYe2erkTiwHpwmXF69urUMSkkww7KhkWZoAAxmX1SYTYK9pqvIpDOVb6_sZn0LZDpn6g'
+  });
+
+  const albums = spotify.search.albums('Caliban');
+  const albumsEl = document.getElementById('albums');
+  let markup;
+
+  albums.then(data => {
+    markup = data.albums.items
+      .map(item =>
+        `<img src='${item.images[0].url}' alt='${item.name}' />`
+      )
+      .join('');
+
+    albumsEl.innerHTML = markup;
+  });
+</script>
+</body>
+</html>
