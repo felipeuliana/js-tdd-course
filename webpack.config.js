@@ -3,7 +3,7 @@ const include = path.join(__dirname, 'src');
 
 module.exports = {
   devtool: 'source-map',
-  entry: './src/index',
+  entry: './index',
   module: {
     rules: [
     {
@@ -13,7 +13,7 @@ module.exports = {
     }]
   },
   output: {
-    library: 'spotifyWrapper',
+    library: 'SpotifyWrapper',
     libraryTarget: 'umd',
     path: path.join(__dirname, 'dist')
   }
