@@ -1,1 +1,1 @@
-console.log('Spotify Wrapper Player is up!')
+console.log('Spotify Wrapper Player is up!');
