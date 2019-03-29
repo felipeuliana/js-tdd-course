@@ -1,4 +1,4 @@
-function createMarkup (data) {
+function createMarkup(data) {
   return (`
     <img class="album-image" src="${data.images[0].url}" alt="${data.name}">
     <p class="album-title">${data.name}</p>
@@ -7,8 +7,9 @@ function createMarkup (data) {
   `);
 }
 
-export default function renderAlbumInfo (data, element) {
+export default function renderAlbumInfo(data, element) {
+  const el = element;
   const markup = createMarkup(data);
 
-  element.innerHTML = markup;
+  el.innerHTML = markup;
 }

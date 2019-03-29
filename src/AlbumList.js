@@ -1,4 +1,4 @@
-function createMarkup (data) {
+function createMarkup(data) {
   return data.map(album => `
     <div class="list-item">
       <img src="${album.images[2].url}" alt="${album.name}" class="list-image">
@@ -9,8 +9,9 @@ function createMarkup (data) {
     </div>`).join('');
 }
 
-export default function renderAlbums (data, element) {
+export default function renderAlbums(data, element) {
+  const el = element;
   const markup = createMarkup(data);
 
-  element.innerHTML = markup;
+  el.innerHTML = markup;
 }
